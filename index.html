@@ -24,30 +24,6 @@ th {
 	text-align:left;
 }
 
-#page
-{
-	display:none;
-}
-
-.loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-
-@keyframes animatebottom{
-	from {bottom: -100px; opacity :0}
-	to {bottom: 0;opacity : 1}
-}
 .w3-top {
 	background-color: black;
 	color:white;
@@ -109,243 +85,236 @@ th {
 	}
 }
 </style>
-<body onload="loader_func() class="animatebottom">
-<div id="loader"></div>
-<div id="page">
-	<!-- Navbar (sit on top) -->
-	<div class="w3-top">
-	  <div class="w3-bar w3-card w3-animate-top " id="myNavbar">
-	    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-	      <i class="fa fa-bars"></i>
-	    </a>
-	    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-	    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-	    <a href="#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> BLOG</a>
-	    <a href="#gallery" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-camera"></i>Gallery</a>
-	    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-bars"></i></a>
-	  </div>
+<body>
 
-	  <!-- Navbar on small screens -->
-	  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-	    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-	    <a href="#blog" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
-	    <a href="#gallery" class="w3-bar-item w3-button" onclick="toggleFunction()">Gallery</a>
-	  </div>
-	</div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-card w3-animate-top " id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> BLOG</a>
+    <a href="#gallery" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-camera"></i>Gallery</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-bars"></i></a>
+  </div>
 
-	<!-- First Parallax Image with Logo Text -->
-	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-	  <div class="w3-display-middle" style="white-space:nowrap;">
-		<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
-			Hi, I'm Arvind
-			<br>
-			<a href="https://github.com/arv-sajeev"><i class="fa fa-github-alt fa-1g"></i></a>
-			<a href="https://www.linkedin.com/in/arvind-sajeev/"><i class="fa fa-linkedin-square fa-1g"></i></a>
-			<a href="mailto: arvind.sajeev@gmail.com"><i class="fa fa-google fa-1g"></i></a>
-			<a href="https://www.flickr.com/people/160902405@N03/"><i class="fa fa-flickr fa-1g"></i></a>
-		</div>
-	  </div>
-	</div>
-
-	<!-- Container (About Section) -->
-	<div class="w3-content w3-container w3-padding-64" id="about">
-	  <h3 class="w3-center">ABOUT ME</h3>
-	  <p style="font-size:30px">
-		<strong>Hi,</strong>
-	  </p>
-	  <p style="font-size:22px">
-		I'm Arvind, I prefer to call myself <strong>"The Raving Sage"</strong> on the web but that hasn't actually caught on with other people just yet. The moniker is sort of a twisted anagram of my name and it's something that I put a lot of thought into &#x1F605;.
-	  </p>
-	  <p style="font-size:22px">
-	 I completed my undergrad in CSE from <strong>College of Engineering Trivandrum</strong>, graduated in 2019. My interests are scattered all over the place but most of them lie close to the hardware, operating systems, computer networks and computer architecture just to name a few. I currently work as a Systems Engineer in TCS.
-	  </p>
-
-	  <p style="font-size:22px">
-		I tend to write code once in a while, most of it is updated on <a href="https://github.com/arv-sajeev">Github</a>. I'm not what you'd call a "Gifted programmer", but I always try to challenge myself and get better. Over the years I've sort of fallen in love with the art that I devote lots of my free time learning stuff or writing code. I'm familiar with C, C++, python, bash, assembly, javascript and java in exactly that order.
-	  </p>
-
-	  <p style="font-size:22px">
-		Like someone once said "Where words stop music begins", I've always been fascinated by music and it's power to elicit emotions and unite people.It's a deeply personal and collaborative experience at the same time. I tend to restrict my singing to the bathroom or in concerts where it is too loud for anyone to hear me but luckily I'm quite comfortable with instruments like the keyboard, guitar and most recently the murali and they allow me to express myself musically to a great extent. These skills that I acquired over many years I completely owe and dedicate to numerous loved ones, my parents, brother, instructors and many others.
-	  </p>
-
-
-	  <div class="w3-row" style="margin-top:30px;margin-bottom:40px">
-	    <div class="w3-col m6 w3-center w3-padding-large">
-	      <img src="assets/img/disismoi.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-	    </div>
-
-	    <!-- Hide this text on small devices -->
-	    <div class="w3-col m6 w3-hide-small w3-padding-large" style="background-color:white;color:black;border-radius:25px;">
-		<h3 class="w3-center">
-			Personal Details
-		</h3>
-		<table>
-			<tr>
-				<th>Name</th>
-				<th>Arvind Sajeev</th>
-			</tr>
-			<tr>
-				<th>Location</th>
-				<th>Kochi, Kerala</th>
-			</tr>
-			<tr>
-				<th>E-mail</th>
-				<th><a href="mailto: arvind.sajeev@gmail.com">arvind.sajeev@gmail.com<a></th>
-			</tr>
-		</table>
-		<h3 class="w3-center">
-			Education
-		</h3>
-		<table>
-			<tr>
-				<th>B.Tech Computer Science</th>
-				<th>College of Engineering Trivandrum </th>
-			</tr>
-			<tr>
-				<th>High-school</th>
-				<th>Rajagiri Christhu Jayanthi</th>
-			</tr>
-		</table>
-		<h3 class="w3-center">
-			Work experience
-		</h3>
-		<table>
-			<tr>
-				<th>TCS Digital</th>
-				<th>Systems Engineer</th>
-				<th>2019</th>
-			</tr>
-			<tr>
-				<th>Quest Global</th>
-				<th>Intern</th>
-				<th>2018</th>
-			</tr>
-			<tr>
-				<th>TNP Consultants</th>
-				<th>Intern</th>
-				<th>2017</th>
-			</tr>
-		</table>
-	    </div>
-	  </div>
-	</div>
-
-
-	<!-- Second Parallax Image with blog text-->
-	<div class="bgimg-2 w3-display-container w3-opacity-min" id="blog">
-	  <div class="w3-display-middle" style="white-space:nowrap;">
-		<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
-		    <span class="w3-xxlarge w3-text-white w3-wide">Blog posts</span>
-		</div>
-	  </div>
-	</div>
-	<div class="w3-content w3-container w3-padding-64" >
-	  <h3 class="w3-center">A log about this blog</h3>
-	  <p>
-		The original intention for this website is to serve as my blog, I've always wanted one. I don't care if nobody actually reads it which probably will be the case, but if you're reading this, now that you reached till here just go on and have a look, stop reading this and read a post, no really go, stop reading, go, go I say&#128540;.
-
-	</p>
-	<p>
-	I consider this sort of my diary/immortality project. I assume github is not gonna take down my repo until they run out of namespace, shutdown the company or the armageddon each less likely than the last, so I guess this is gonna stay here for a while. The idea has been in mind since the start of the <strong>Corona lockdown</strong> of 2020 but I never really got to doing anything. Skip ahead months in and I finally lifted my sorry ass and got to work. I don't plan to stick to any specific topic or even screen my posts for quality, just consider what you see here as rants of mine and nothing more. I guess tagging posts would be a good idea I'll try to get something of that sort set up.
-	  </p>
-	  <p>
-		The main aim is to set this site up with the tool <a href="https://github.com/arv-sajeev/statim">statim</a>, which is a tool I'm working on and will hopefully complete. It is intended to be a lightweight static site generator with minimum dependencies, using only bash scripts and tools already available in the linux ecosystem. The idea is not originally my own but of a young colleague of a friend of mine who goes by the name NerdyPeppers. It seemed to be a good idea. The site design as such took next to no work the wonderful and ever helpful people at w3-schools had a free template, I just tweaked it a bit here and there and the results are much better than I expected.
-	  </p>
-		
-	</div>
-	<div class="bgimg-3 w3-display-container w3-opacity-min" id="gallery">
-	  <div class="w3-display-middle" style="white-space:nowrap;">
-		<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
-		    <span class="w3-xxlarge w3-text-white w3-wide">Gallery</span>
-		</div>
-	  </div>
-	</div>
-
-	<!-- Container (Gallery Section) -->
-	<div class="w3-content w3-container w3-padding-64">
-	  <h3 class="w3-center">MY WORK</h3>
-	  <p class="w3-center">
-		 Here are a couple of pictures that I clicked with the DSLR Acha got me.<br>
-		<em>Click on them to enlarge</em>
-	  </p>
-	  <br>
-
-	  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-	  <div class="w3-row-padding w3-center">
-	    <div class="w3-col m3">
-	      <img src="./assets/img/gokarnagirl.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Until tommorow mister sun. ">
-	    </div>
-
-	    <div class="w3-col m3">
-	      <img src="./assets/img/gallery/6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Butterflies in my backyard">
-	    </div>
-
-	    <div class="w3-col m3">
-	      <img src="./assets/img/gallery/3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Chunchi falls">
-	    </div>
-
-	    <div class="w3-col m3">
-	      <img src="./assets/img/gallery/4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Teen angst feat. Adarsh">
-	    </div>
-	  </div>
-
-	  <div class="w3-row-padding w3-center w3-section">
-	    <div class="w3-col m3">
-	      <img src="./assets/img/gallery/7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Butterflies in my backyard">
-	    </div>
-
-	    <div class="w3-col m3">
-	      <img src="./assets/img/gallery/2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Girl talk">
-	    </div>
-
-	    <div class="w3-col m3">
-	      <img src="./assets/img/gallery/5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sweat">
-	    </div>
-
-	    <div class="w3-col m3">
-	      <img src="./assets/img/gallery/8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Pigoens Assemble">
-	    </div>
-	    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-	  </div>
-	</div>
-
-	<!-- Modal for full size images on click-->
-	<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-	  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-	  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-	    <img id="img01" class="w3-image">
-	    <p id="caption" class="w3-opacity w3-large"></p>
-	  </div>
-	</div>
-
-
-	<!-- Footer -->
-	<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-	  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-	      <div class="w3-large w3-margin-bottom">
-		<i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Kerala, India<br>
-		<i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: arvind.sajeev@gmail.com<br>
-	      </div>
-	  <div class="w3-xlarge w3-section">
-			<a href="https://github.com/arv-sajeev"><i class="fa fa-github-alt fa-1g"></i></a>
-			<a href="https://www.linkedin.com/in/arvind-sajeev/"><i class="fa fa-linkedin-square fa-1g"></i></a>
-			<a href="mailto: arvind.sajeev@gmail.com"><i class="fa fa-google fa-1g"></i></a>
-			<a href="https://www.flickr.com/people/160902405@N03/"><i class="fa fa-flickr fa-1g"></i></a>
-	  </div>
-	  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a> and 
-	<a href="https://github.com/arv-sajeev/statim" title="statim - lightweight static sites" target="_blank" class="w3-hover-text-green">statim</a>	
-	  </p>
-	</footer>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#blog" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
 </div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+	<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
+		Hi, I'm Arvind
+		<br>
+		<a href="https://github.com/arv-sajeev"><i class="fa fa-github-alt fa-1g"></i></a>
+		<a href="https://www.linkedin.com/in/arvind-sajeev/"><i class="fa fa-linkedin-square fa-1g"></i></a>
+		<a href="mailto: arvind.sajeev@gmail.com"><i class="fa fa-google fa-1g"></i></a>
+		<a href="https://www.flickr.com/people/160902405@N03/"><i class="fa fa-flickr fa-1g"></i></a>
+	</div>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p style="font-size:30px">
+	<strong>Hi,</strong>
+  </p>
+  <p style="font-size:22px">
+	I'm Arvind, I prefer to call myself <strong>"The Raving Sage"</strong> on the web but that hasn't actually caught on with other people just yet. The moniker is sort of a twisted anagram of my name and it's something that I put a lot of thought into &#x1F605;.
+  </p>
+  <p style="font-size:22px">
+ I completed my undergrad in CSE from <strong>College of Engineering Trivandrum</strong>, graduated in 2019. My interests are scattered all over the place but most of them lie close to the hardware, operating systems, computer networks and computer architecture just to name a few. I currently work as a Systems Engineer in TCS.
+  </p>
+
+  <p style="font-size:22px">
+	I tend to write code once in a while, most of it is updated on <a href="https://github.com/arv-sajeev">Github</a>. I'm not what you'd call a "Gifted programmer", but I always try to challenge myself and get better. Over the years I've sort of fallen in love with the art that I devote lots of my free time learning stuff or writing code. I'm familiar with C, C++, python, bash, assembly, javascript and java in exactly that order.
+  </p>
+
+  <p style="font-size:22px">
+	Like someone once said "Where words stop music begins", I've always been fascinated by music and it's power to elicit emotions and unite people.It's a deeply personal and collaborative experience at the same time. I tend to restrict my singing to the bathroom or in concerts where it is too loud for anyone to hear me but luckily I'm quite comfortable with instruments like the keyboard, guitar and most recently the murali and they allow me to express myself musically to a great extent. These skills that I acquired over many years I completely owe and dedicate to numerous loved ones, my parents, brother, instructors and many others.
+  </p>
+
+
+  <div class="w3-row" style="margin-top:30px;margin-bottom:40px">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="assets/img/disismoi.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large" style="background-color:white;color:black;border-radius:25px;">
+	<h3 class="w3-center">
+		Personal Details
+	</h3>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Arvind Sajeev</th>
+		</tr>
+		<tr>
+			<th>Location</th>
+			<th>Kochi, Kerala</th>
+		</tr>
+		<tr>
+			<th>E-mail</th>
+			<th><a href="mailto: arvind.sajeev@gmail.com">arvind.sajeev@gmail.com<a></th>
+		</tr>
+	</table>
+	<h3 class="w3-center">
+		Education
+	</h3>
+	<table>
+		<tr>
+			<th>B.Tech Computer Science</th>
+			<th>College of Engineering Trivandrum </th>
+		</tr>
+		<tr>
+			<th>High-school</th>
+			<th>Rajagiri Christhu Jayanthi</th>
+		</tr>
+	</table>
+	<h3 class="w3-center">
+		Work experience
+	</h3>
+	<table>
+		<tr>
+			<th>TCS Digital</th>
+			<th>Systems Engineer</th>
+			<th>2019</th>
+		</tr>
+		<tr>
+			<th>Quest Global</th>
+			<th>Intern</th>
+			<th>2018</th>
+		</tr>
+		<tr>
+			<th>TNP Consultants</th>
+			<th>Intern</th>
+			<th>2017</th>
+		</tr>
+	</table>
+    </div>
+  </div>
+</div>
+
+
+<!-- Second Parallax Image with blog text-->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="blog">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+	<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
+	    <span class="w3-xxlarge w3-text-white w3-wide">Blog posts</span>
+	</div>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64" >
+  <h3 class="w3-center">A log about this blog</h3>
+  <p>
+	The original intention for this website is to serve as my blog, I've always wanted one. I don't care if nobody actually reads it which probably will be the case, but if you're reading this, now that you reached till here just go on and have a look, stop reading this and read a post, no really go, stop reading, go, go I say&#128540;.
+
+</p>
+<p>
+I consider this sort of my diary/immortality project. I assume github is not gonna take down my repo until they run out of namespace, shutdown the company or the armageddon each less likely than the last, so I guess this is gonna stay here for a while. The idea has been in mind since the start of the <strong>Corona lockdown</strong> of 2020 but I never really got to doing anything. Skip ahead months in and I finally lifted my sorry ass and got to work. I don't plan to stick to any specific topic or even screen my posts for quality, just consider what you see here as rants of mine and nothing more. I guess tagging posts would be a good idea I'll try to get something of that sort set up.
+  </p>
+  <p>
+	The main aim is to set this site up with the tool <a href="https://github.com/arv-sajeev/statim">statim</a>, which is a tool I'm working on and will hopefully complete. It is intended to be a lightweight static site generator with minimum dependencies, using only bash scripts and tools already available in the linux ecosystem. The idea is not originally my own but of a young colleague of a friend of mine who goes by the name NerdyPeppers. It seemed to be a good idea. The site design as such took next to no work the wonderful and ever helpful people at w3-schools had a free template, I just tweaked it a bit here and there and the results are much better than I expected.
+  </p>
+	
+</div>
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="gallery">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+	<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
+	    <span class="w3-xxlarge w3-text-white w3-wide">Gallery</span>
+	</div>
+  </div>
+</div>
+
+<!-- Container (Gallery Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">MY WORK</h3>
+  <p class="w3-center">
+	 Here are a couple of pictures that I clicked with the DSLR Acha got me.<br>
+	<em>Click on them to enlarge</em>
+  </p>
+  <br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="./assets/img/gokarnagirl.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Until tommorow mister sun. ">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./assets/img/gallery/6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Butterflies in my backyard">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./assets/img/gallery/3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Chunchi falls">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./assets/img/gallery/4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Teen angst feat. Adarsh">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="./assets/img/gallery/7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Butterflies in my backyard">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./assets/img/gallery/2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Girl talk">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./assets/img/gallery/5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sweat">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="./assets/img/gallery/8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Pigoens Assemble">
+    </div>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Kerala, India<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: arvind.sajeev@gmail.com<br>
+      </div>
+  <div class="w3-xlarge w3-section">
+		<a href="https://github.com/arv-sajeev"><i class="fa fa-github-alt fa-1g"></i></a>
+		<a href="https://www.linkedin.com/in/arvind-sajeev/"><i class="fa fa-linkedin-square fa-1g"></i></a>
+		<a href="mailto: arvind.sajeev@gmail.com"><i class="fa fa-google fa-1g"></i></a>
+		<a href="https://www.flickr.com/people/160902405@N03/"><i class="fa fa-flickr fa-1g"></i></a>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a> and 
+<a href="https://github.com/arv-sajeev/statim" title="statim - lightweight static sites" target="_blank" class="w3-hover-text-green">statim</a>	
+  </p>
+</footer>
  
 <script>
 // Modal Image Gallery
-
-function loader_func(){
-	console.log("Loading page contents");
-	document.getElementById("loader").style.display = "none";
-	document.getElementById("page").style.display = "block";
-}
 function onClick(element) {
   document.getElementById("img01").src = element.src;
   document.getElementById("modal01").style.display = "block";
