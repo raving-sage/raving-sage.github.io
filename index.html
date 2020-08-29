@@ -59,6 +59,13 @@ th {
   min-height: 400px;
 }
 
+.section-holder
+{
+	color:white;
+	background-color:rgba(0,0,0,0.6);
+	font-size: 64px;
+}
+
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
@@ -69,12 +76,20 @@ th {
     min-height: 400px;
   }
 }
+
+@media only screen and (max-device-width: 1600px)
+{
+	.section-holder 
+	{
+		font-size: 36px;
+	}
+}
 </style>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
+  <div class="w3-bar w3-card w3-animate-top " id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
@@ -82,6 +97,7 @@ th {
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> BLOG</a>
     <a href="#gallery" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-camera"></i>Gallery</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-bars"></i></a>
   </div>
 
   <!-- Navbar on small screens -->
@@ -96,7 +112,7 @@ th {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-	<div class="w3-center w3-padding-large w3-black w3-jumbo w3-wide" style="color:white;background-color:rgba(0,0,0,0.6)">
+	<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
 		Hi, I'm Arvind
 		<br>
 		<a href="https://github.com/arv-sajeev"><i class="fa fa-github-alt fa-1g"></i></a>
@@ -194,7 +210,7 @@ th {
 <!-- Second Parallax Image with blog text-->
 <div class="bgimg-2 w3-display-container w3-opacity-min" id="blog">
   <div class="w3-display-middle" style="white-space:nowrap;">
-	<div class="w3-center w3-padding-large w3-black w3-jumbo w3-wide" style="color:white;background-color:rgba(0,0,0,0.6)">
+	<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
 	    <span class="w3-xxlarge w3-text-white w3-wide">Blog posts</span>
 	</div>
   </div>
@@ -215,7 +231,7 @@ I consider this sort of my diary/immortality project. I assume github is not gon
 </div>
 <div class="bgimg-3 w3-display-container w3-opacity-min" id="gallery">
   <div class="w3-display-middle" style="white-space:nowrap;">
-	<div class="w3-center w3-padding-large w3-black w3-jumbo w3-wide" style="color:white;background-color:rgba(0,0,0,0.6)">
+	<div class="w3-center w3-padding-large w3-wide section-holder" style="color:white;background-color:rgba(0,0,0,0.6)">
 	    <span class="w3-xxlarge w3-text-white w3-wide">Gallery</span>
 	</div>
   </div>
