@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<title> STATIMTITLE </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../assets/css/w3.css">
+<link rel="stylesheet" href="../../assets/css/styles.css">
+<link rel="stylesheet" href="../../assets/css/pandoc-hl.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+	<div class="w3-top">
+	  <div class="w3-bar w3-card w3-animate-top " id="myNavbar">
+	    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+	      <i class="fa fa-bars"></i>
+	    </a>
+	    <a href="index.html#home" class="w3-bar-item w3-button">HOME</a>
+	    <a href="index.html#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+	    <a href="index.html#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> BLOG</a>
+	    <a href="index.html#gallery" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-camera"></i>Gallery</a>
+	    <a href="index.html#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-bars"></i></a>
+	  </div>
+
+	  <!-- Navbar on small screens -->
+	  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+	    <a href="index.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+	    <a href="index.html#blog" class="w3-bar-item w3-button" onclick="toggleFunction()">BLOG</a>
+	    <a href="index.html#gallery" class="w3-bar-item w3-button" onclick="toggleFunction()">GALLERY</a>
+	    <a href="index.html#" class="w3-bar-item w3-button">SEARCH</a>
+	  </div>
+	</div>
+
+	<div class="w3-content w3-container w3-padding-64" id="post-content">
+		<h1 id="finding-the-minimum-number-from-the-array">Finding the minimum number from the array</h1>
+<p>The goal of this program is to find the minimum number from an array and then exit</p>
+<p>We will be using the following registers * <strong>%edi</strong> - to hold the index of the element * <strong>%eax</strong> - to hold the element being considered / to indicate which syscall * <strong>%ebx</strong> - to hold the largest element / the return after calling exit</p>
+<p>The data will be in an array of longs, and we are assuming the <code>0</code> value is the terminator.</p>
+<ul>
+<li>here we use the %edi register as index it is incremented using <code>incl</code></li>
+<li>we are using the indexed addressing mode here we add to the memory address <code>data_array</code> the value in %edi multiplied by the multiplier provided</li>
+<li>we choose the multiplier depending on the size of the data, here since it is a long we choose 4</li>
+<li>the jmp and jle instructions are used to implement conditionals and loops</li>
+<li>the loops are done by labelling certain points and referencing them as jump-pts</li>
+<li>the jle check the status register after a cmp operation, the content of cmp are usually dst-src and the status bits are set based on this</li>
+<li>like the last time we return the answer using %ebx</li>
+</ul>
+<p><strong>Here is a nuance that I found we can only use the %ebx to return answer methods for values of upto 1 byte, since even though %ebx can store a word of 4 bytes the exit() syscall stores only the least significant byte. i.e %ebx &amp; 0x000000FF</strong></p>
+<div class="sourceCode"><pre class="sourceCode gnuassembler"><code class="sourceCode gnuassembler">
+<span class="co"># FIND_MIN.S</span>
+
+<span class="co"># This program finds the max number of set of data items</span>
+<span class="co">#</span>
+<span class="co"># Variables</span>
+<span class="co"># %edi      -   holds the index of the data being considered</span>
+<span class="co"># %ebx      -   largest data item till now</span>
+<span class="co"># %eax      -   Current data item</span>
+<span class="co"># </span>
+<span class="co"># data_array    -   contains the item data is terminated by a zero assuming the items are all positive</span>
+
+<span class="kw">.section</span> <span class="kw">.data</span>
+
+<span class="kw">data_array :</span>
+    <span class="kw">.long</span> <span class="dv">256</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">23</span>,<span class="dv">6</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">231</span>,<span class="dv">234</span>
+
+<span class="kw">.section</span> <span class="kw">.text</span>
+
+<span class="kw">.global</span> _start 
+    <span class="kw">_start:</span>
+        movl $0, %edi           <span class="co"># Initialize the index value to 0</span>
+        movl data_array(,%edi,<span class="dv">4</span>),%eax   <span class="co"># Load the word of size 4 from position edi from start of data_array</span>
+        movl %eax,%ebx          <span class="co"># Load it as the first largest item till now</span>
+
+    <span class="kw">comp_loop:</span>              <span class="co"># Label to mark start of the loop</span>
+        cmpl $0, %eax           <span class="co"># Check if we&#39;ve hit the delimiter which we set as 0 </span>
+        je   exit
+        incl %edi           <span class="co"># Increment the index</span>
+        movl data_array(,%edi,<span class="dv">4</span>),%eax   <span class="co"># Loading the long to eax as before</span>
+        cmpl %ebx,%eax          <span class="co"># compare ebx with eax</span>
+        jle  comp_loop          <span class="co"># if eax is less than or equal to ebx go to next iteration</span>
+        movl %eax,%ebx
+        jmp  comp_loop
+
+    <span class="kw">exit:</span>
+        movl $1,%eax            <span class="co"># Fill in the syscall number the result is already in ebx just echo it after executing</span>
+        int  $0x80
+        
+        </code></pre></div>
+	</div>
+	<div class="w3-content w3-container w3-padding-64" id="tag-links">
+		STATIMPOSTTAGLINKS
+	</div>
+</body>
+</html>
+

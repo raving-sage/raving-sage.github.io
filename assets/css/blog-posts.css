@@ -35,6 +35,7 @@
 	border-style: solid;
 	border-width: medium;
 	transition: all 0.7s;
+	cursor:pointer;
 }
 
 .blog-post:hover
@@ -89,6 +90,13 @@
 .blog-post-link
 {
 	margin-right: -1px;
+	transition: all 0.7s;
+}
+
+.blog-post-link:hover
+{
+	color:green;
+	transform: scale(1.5);
 }
 
 .hr-list

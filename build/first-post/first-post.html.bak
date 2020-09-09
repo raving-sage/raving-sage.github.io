@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<title> STATIMTITLE </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../assets/css/w3.css">
+<link rel="stylesheet" href="../../assets/css/styles.css">
+<link rel="stylesheet" href="../../assets/css/pandoc-hl.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+	<div class="w3-top">
+	  <div class="w3-bar w3-card w3-animate-top " id="myNavbar">
+	    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+	      <i class="fa fa-bars"></i>
+	    </a>
+	    <a href="index.html#home" class="w3-bar-item w3-button">HOME</a>
+	    <a href="index.html#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+	    <a href="index.html#blog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> BLOG</a>
+	    <a href="index.html#gallery" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-camera"></i>Gallery</a>
+	    <a href="index.html#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"><i class="fa fa-bars"></i></a>
+	  </div>
+
+	  <!-- Navbar on small screens -->
+	  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+	    <a href="index.html#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+	    <a href="index.html#blog" class="w3-bar-item w3-button" onclick="toggleFunction()">BLOG</a>
+	    <a href="index.html#gallery" class="w3-bar-item w3-button" onclick="toggleFunction()">GALLERY</a>
+	    <a href="index.html#" class="w3-bar-item w3-button">SEARCH</a>
+	  </div>
+	</div>
+
+	<div class="w3-content w3-container w3-padding-64" id="post-content">
+		STATIMPOSTCONTENT
+	</div>
+	<div class="w3-content w3-container w3-padding-64" id="tag-links">
+		STATIMPOSTTAGLINKS
+	</div>
+</body>
+</html>
+
